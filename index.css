@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: url('wood-pattern.jpg') repeat;
+  text-align: center;
+  position: relative;
+}
+
+.calendar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  width: 80vw;
+  max-width: 400px;
+  background: #fff;
+  margin: auto;
+  box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.5);
+}
+
+.calendar:before {
+  content: '';
+  display: block;
+  padding-top: 120%;
+}
