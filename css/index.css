@@ -27,7 +27,7 @@ body {
   right:  0;
   bottom: 0;
   left:   0;
-  width: 80vw;
+  width: 100vw;
   max-width: 400px;
   margin: auto;
 }
@@ -50,11 +50,11 @@ body {
   -webkit-box-align: center;
   list-style: none;
 }
-
 .calendar .islider-outer .page {
   background: #fff;
   box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
+  position: relative;
 }
 
 .calendar .islider-outer .page .content {
@@ -68,5 +68,5 @@ body {
 .calendar .islider-outer .page:before {
   content: '';
   display: block;
-  padding-top: 120%;
+  padding-top: 160%;
 }

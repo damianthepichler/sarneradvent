@@ -21,9 +21,10 @@ var files = {
 $(function() {
 
   if (dateNow >= dateFrom) {
-    var iterationNumber = 1;
+    var iterationNumber = 0;
 
     for (var thisDateString = dateFrom; thisDateString <= dateNow; thisDateString++) {
+        iterationNumber++;
         var thisPageDate = moment(thisDateString, 'YYYYMMDD');
         var $thisPageObject = $pageTemplate.clone();
         $thisPageObject.removeClass('hide-me');
@@ -34,14 +35,12 @@ $(function() {
         $thisPageObject.find('.js-month').html(thisPageDate.format('MMMM'));
 
         pages.push({content : $thisPageObject.prop('outerHTML')});
-        iterationNumber++;
     }
 
 
     var slider = new iSlider(document.getElementById('js-pages'), pages, {
-        // isLooping: 1,
+        initIndex : (iterationNumber - 1),
         isOverspread: 1,
-        // isAutoplay: 1,
         animateTime: 800,
         animateType: 'flow',
         isVertical: true
