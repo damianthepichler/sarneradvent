@@ -14,28 +14,48 @@
 	<meta property="og:image" content="https://www.sarneradvent.net/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="normalize.css" type="text/css" media="all">
-  <link rel="stylesheet" href="index.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/iSlider.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/index.css" type="text/css" media="all">
 </head>
 <body>
-  <h1>Sarner Advent</h1>
 
-  <div class="calendar  js-calendar">
+  <div class="calendar  js-calendar" id="js-pages">
+    <!--<div class="pages  js-pages"></div>-->
   </div>
 
-  <div class="page-template">
-    <div class="header"></div>
+  <div class="page  hide-me  js-page-template">
+    <div class="header">
+    </div>
     <div class="content">
+      <h1>Sarner Advent</h1>
       <div class="week-day  js-week-day"></div>
       <div class="day js-day"></div>
       <div class="month  js-month"></div>
-      <button type="button" class="play">Derzhel mir!</button>
+      <audio controls>
+        <source src="" type="audio/mpeg" class="js-audio-source" />
+      </audio>
     </div>
   </div>
 
 
-  <script type="text/javascript" src="jquery.min.js"></script>
-  <script type="text/javascript" src="moment-with-locales.js"></script>
-  <script type="text/javascript" src="index.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyA2DgWbhIGX3XbYP-o3HjQfAZG--6PhjN8",
+          authDomain: "sarneradvent.firebaseapp.com",
+          databaseURL: "https://sarneradvent.firebaseio.com",
+          projectId: "sarneradvent",
+          storageBucket: "sarneradvent.appspot.com",
+          messagingSenderId: "843095625600"
+      };
+      firebase.initializeApp(config);
+  </script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/moment-with-locales.js"></script>
+  <script type="text/javascript" src="js/iSlider.min.js"></script>
+  <script type="text/javascript" src="js/iSlider.animate.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

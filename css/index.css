@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: url('../wood-pattern.jpg') repeat;
+  text-align: center;
+  position: relative;
+}
+
+.hide-me {
+  display: none;
+}
+
+.calendar {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.calendar .islider-outer {
+  position: absolute;
+  top:    0;
+  right:  0;
+  bottom: 0;
+  left:   0;
+  width: 80vw;
+  max-width: 400px;
+  margin: auto;
+}
+
+.calendar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.calendar li {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  list-style: none;
+}
+
+.calendar .islider-outer .page {
+  background: #fff;
+  box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.calendar .islider-outer .page .content {
+  position: absolute;
+  top:    0;
+  right:  0;
+  bottom: 0;
+  left:   0;
+}
+
+.calendar .islider-outer .page:before {
+  content: '';
+  display: block;
+  padding-top: 120%;
+}
