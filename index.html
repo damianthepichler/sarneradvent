@@ -14,6 +14,8 @@
 	<meta property="og:image" content="https://www.sarneradvent.net/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
 
+  <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+
   <link rel="stylesheet" href="css/normalize.css" type="text/css" media="all">
   <link rel="stylesheet" href="css/iSlider.css" type="text/css" media="all">
   <link rel="stylesheet" href="css/index.css" type="text/css" media="all">
@@ -27,14 +29,19 @@
   <div class="page  hide-me  js-page-template">
     <div class="header">
     </div>
-    <div class="content">
-      <h1>Sarner Advent</h1>
+    <div class="content  js-page-content">
+      <h1 class="heading">Sarner Advent</h1>
       <div class="week-day  js-week-day"></div>
       <div class="day js-day"></div>
       <div class="month  js-month"></div>
-      <audio controls>
+      <audio controls class="native-player  js-native-player">
         <source src="" type="audio/mpeg" class="js-audio-source" />
       </audio>
+      <div class="player-controls  js-player-controls">
+        <button class="button  button--play-pause  button--play-pause--play  js-button-play-pause" type="button">
+          <span class="button-text  button-text--play">Sog lei!</span><span class="button-text  button-text--pause">Still!</span>
+        </button>
+      </div>
     </div>
   </div>
 
