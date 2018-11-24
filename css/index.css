@@ -55,17 +55,14 @@ body {}
   left:   0;
   width: 100vw;
   max-width: 400px;
-  margin: auto;
-}
-
-.calendar ul {
   list-style: none;
   margin: 0;
   padding: 0;
   height: 100%;
   overflow: hidden;
 }
-.calendar li {
+
+.calendar .islider-outer .islider-html {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -76,7 +73,8 @@ body {}
   -webkit-box-align: center;
   list-style: none;
 }
-.calendar .islider-outer .page {
+
+.calendar .islider-outer .islider-html .page {
   background: #fff;
   box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -85,7 +83,7 @@ body {}
 }
 
 
-.calendar .islider-outer .page:after {
+.calendar .islider-outer .islider-html .page:after {
   content: '';
   width: 170px;
   height: 125px;
@@ -96,74 +94,79 @@ body {}
   right: -60px;
 }
 
-.calendar .islider-outer .page .content {
-  position: absolute;
-  top:    0;
-  right:  0;
-  bottom: 0;
-  left:   0;
-}
-
-.calendar .islider-outer .page:before {
+.calendar .islider-outer .islider-html .page:before {
   content: '';
   display: block;
   padding-top: 160%;
 }
 
-.calendar .islider-outer .page .content .heading {
+.calendar .islider-outer .islider-html .page .content {
+  position: absolute;
+  top:    0;
+  right:  0;
+  bottom: 0;
+  left:   0;
+  transition: opacity 0.5s;
+}
+
+.calendar .islider-outer .islider-html:not(.islider-active) .page .content {
+  opacity: 0.1;
+}
+
+.calendar .islider-outer .islider-html .page .content .heading {
   margin-top: 12vh;
   font-size: 3.2em;
   font-weight: normal;
   line-height: 1.25em;
 }
 
-.calendar .islider-outer .page .content .week-day {
+.calendar .islider-outer .islider-html .page .content .week-day {
   font-size: 2.2em;
   line-height: 1em;
 }
 
-.calendar .islider-outer .page .content .day {
+.calendar .islider-outer .islider-html .page .content .day {
   font-size: 8em;
   line-height: 1em;
   font-weight: bold;
 }
 
-.calendar .islider-outer .page .content .day:after {
+.calendar .islider-outer .islider-html .page .content .day:after {
   content: '.';
 }
 
-.calendar .islider-outer .page .content .month {
+.calendar .islider-outer .islider-html .page .content .month {
   margin-top: -0.6em;
   font-size: 1.6em;
   line-height: 1em;
 }
 
-.calendar .islider-outer .page .content .native-player {
+.calendar .islider-outer .islider-html .page .content .native-player {
   display: none;
 }
 
-.calendar .islider-outer .page .content .player-controls {
+.calendar .islider-outer .islider-html .page .content .player-controls {
   margin: 2em auto 0;
 }
 
-.calendar .islider-outer .page .content .player-controls .button {
+.calendar .islider-outer .islider-html .page .content .player-controls .button {
   margin: 0.5em auto;
   font-size: 2em;
   display: block;
   width: 200px;
 }
 
-.calendar .islider-outer .page .content .player-controls .button--play-pause {}
+.calendar .islider-outer .islider-html .page .content .player-controls .button--play-pause {}
 
-.calendar .islider-outer .page .content .player-controls .button--play-pause--play .button-text--pause {
+.calendar .islider-outer .islider-html .page .content .player-controls .button--play-pause--play .button-text--pause {
   display: none;
 }
 
-.calendar .islider-outer .page .content .player-controls .button--play-pause--pause .button-text--play {
+.calendar .islider-outer .islider-html .page .content .player-controls .button--play-pause--pause .button-text--play {
   display: none;
 }
 
-.calendar .islider-outer .page .content .player-controls .button--play-pause {
+.calendar .islider-outer .islider-html .page .content .player-controls .button--play-pause {
   box-shadow: none;
   border: none;
   font-size: 1.2em;
@@ -174,11 +177,11 @@ body {}
   background-size: contain;
 }
 
-.calendar .islider-outer .islider-active .page .content .player-controls .button--play-pause--play {
+.calendar .islider-outer .islider-html.islider-active .page .content .player-controls .button--play-pause--play {
   animation: wiggle 4s 0s infinite;
 }
 
-.calendar .islider-outer .page .content .player-controls .button--play-pause--pause {
+.calendar .islider-outer .islider-html .page .content .player-controls .button--play-pause--pause {
   transform: rotate(-10deg);
 }
 
