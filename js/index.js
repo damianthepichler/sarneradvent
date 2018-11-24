@@ -44,6 +44,7 @@ $(function() {
         if (!$this.hasClass('js-button-play-pause')) {
             $this = $this.closest('.js-button-play-pause');
         }
+
         $this.toggleClass('button--play-pause--play button--play-pause--pause');
 
         var thisPlayer = $this.closest('.js-page-content').find('.js-native-player')[0];

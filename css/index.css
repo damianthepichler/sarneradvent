@@ -17,11 +17,34 @@ body {
   display: none;
 }
 
+button:focus {outline:0;}
+
+body {}
+
+.global-decoration {}
+
+.global-decoration .speck {
+  width: 33%;
+  max-width: 200px;
+  background: url("../images/speck.png") no-repeat center center;
+  background-size: contain;
+  position: fixed;
+  top:  -1%;
+  left: 0;
+  z-index: 20;
+}
+.global-decoration .speck:after {
+  content: '';
+  display: block;
+  padding-bottom: 162%;
+}
+
 .calendar {
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: absolute;
+  z-index: 10;
 }
 
 .calendar .islider-outer {
@@ -138,4 +161,42 @@ body {
 
 .calendar .islider-outer .page .content .player-controls .button--play-pause--pause .button-text--play {
   display: none;
+}
+
+.calendar .islider-outer .page .content .player-controls .button--play-pause {
+  box-shadow: none;
+  border: none;
+  font-size: 1.2em;
+  padding-bottom: 50px;
+  padding-left: 76px;
+  width: 200px;
+  background: url("../images/trompete.png") no-repeat center bottom;
+  background-size: contain;
+}
+
+.calendar .islider-outer .islider-active .page .content .player-controls .button--play-pause--play {
+  animation: wiggle 4s 0s infinite;
+}
+
+.calendar .islider-outer .page .content .player-controls .button--play-pause--pause {
+  transform: rotate(-10deg);
+}
+
+
+.footer {
+  position: absolute;
+  right:  0;
+  bottom: 0.2em;
+  left:   0;
+  color: #fff;
+  text-shadow: 4px 4px 4px #000000;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  40% { transform: rotate(0deg); }
+  45% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  55% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
