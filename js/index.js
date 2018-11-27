@@ -40,6 +40,7 @@ $(function() {
     var $buttonPlayPause = $('.js-button-play-pause');
 
     $(document).on('click', $buttonPlayPause, function(e){
+        alert()
         var $this = $(e.target);
         if (!$this.hasClass('js-button-play-pause')) {
             $this = $this.closest('.js-button-play-pause');
