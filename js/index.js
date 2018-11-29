@@ -1,7 +1,7 @@
 
 //var dateNow  = moment();
 moment.locale('de');
-var dateNow  = 20181203;
+var dateNow  = 20181207;
 var dateFrom = 20181201;
 var dateTo   = 20181224;
 var $pageTemplate   = $('.js-page-template');
@@ -11,11 +11,30 @@ var pages = [];
 var filesBasePath = 'files/';
 var filesEnding   = '.mp3';
 var files = {
-    1 : 'test1',
-    2 : 'test2',
-    3 : 'test3',
-    4 : 'test4',
-    5 : 'test5',
+    1  : 'joke-1',
+    2  : 'joke-2',
+    3  : 'joke-3',
+    4  : 'joke-4',
+    5  : 'joke-5',
+    6  : 'joke-6',
+    7  : 'joke-7',
+    8  : 'joke-8',
+    9  : 'joke-9',
+    10 : 'joke-10',
+    11 : 'joke-11',
+    12 : 'joke-12',
+    13 : 'joke-13',
+    14 : 'joke-14',
+    15 : 'joke-15',
+    16 : 'joke-16',
+    17 : 'joke-17',
+    18 : 'joke-18',
+    19 : 'joke-19',
+    20 : 'joke-20',
+    21 : 'joke-21',
+    22 : 'joke-22',
+    23 : 'joke-23',
+    24 : 'joke-24',
 };
 
 $(function() {
@@ -40,7 +59,6 @@ $(function() {
     var $buttonPlayPause = $('.js-button-play-pause');
 
     $(document).on('click', $buttonPlayPause, function(e){
-        alert()
         var $this = $(e.target);
         if (!$this.hasClass('js-button-play-pause')) {
             $this = $this.closest('.js-button-play-pause');
