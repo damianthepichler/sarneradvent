@@ -177,6 +177,7 @@ body {}
   background: url("../images/trompete.png") no-repeat center bottom;
   background-size: contain;
   position: relative;
+  z-index: 20;
 }
 
 .calendar .islider-outer .islider-html .page .content .player-controls .button--play-pause .click-overlay {

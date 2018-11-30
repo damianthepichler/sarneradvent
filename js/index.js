@@ -1,7 +1,7 @@
 
 //var dateNow  = moment();
 moment.locale('de');
-var dateNow  = 20181207;
+var dateNow  = 20181203;
 var dateFrom = 20181201;
 var dateTo   = 20181224;
 var $pageTemplate   = $('.js-page-template');
@@ -57,11 +57,14 @@ $(function() {
     }
 
     var $buttonPlayPause = $('.js-button-play-pause');
-
-    $(document).on('click', $buttonPlayPause, function(e){
+    $(document).on('click touchstart', $buttonPlayPause, function(e){
         var $this = $(e.target);
         if (!$this.hasClass('js-button-play-pause')) {
             $this = $this.closest('.js-button-play-pause');
+        }
+
+        if ($this.length == 0) {
+            return;
         }
 
         $this.toggleClass('button--play-pause--play button--play-pause--pause');
