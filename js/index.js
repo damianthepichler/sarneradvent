@@ -1,7 +1,7 @@
 
-//var dateNow  = moment();
 moment.locale('de');
-var dateNow  = 20181203;
+var dateNow  = moment().format('YYYYMMDD');
+// var dateNow  = 20181203;
 var dateFrom = 20181201;
 var dateTo   = 20181224;
 var $pageTemplate   = $('.js-page-template');
