@@ -259,6 +259,7 @@ body {
     height: 45vh;
     max-width: 400px;
     max-height: 600px;
+    min-height: 280px;
     padding: 0 12px 20px;
     margin: auto;
     background: #fff;
