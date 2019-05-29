@@ -2,9 +2,9 @@ moment.locale('de');
 
 var dateNow = moment().format('YYYYMMDD');
 if (findGetParameter('chuck') == 'testa') {
-    var dateNow = 20181201;
+    var dateNow = 20181224;
 }
-var dateNow = 20181201;
+var dateNow = 20181224;
 var dateFrom = 20181201;
 var dateTo = 20181224;
 var $pageTemplate = $('.js-page-template');
